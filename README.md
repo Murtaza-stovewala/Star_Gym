@@ -5,7 +5,7 @@
 -->
 # 🚀 Star Gym
 
-🌐 **Live Demo**: [https://tours-travels-2nd-html.vercel.app/](https://tours-travels-2nd-html.vercel.app/)
+🌐 **Live Demo**: [https://star-gym.vercel.app/](https://star-gym.vercel.app/)
 
 Star Gym is a modern, fully responsive fitness and gym website template built with **HTML5, Vanilla JavaScript, and Custom CSS**.
 This project showcases a premium fitness experience, featuring immersive class schedules, trainer profiles, pricing plans, and a polished, dark-mode user interface.
