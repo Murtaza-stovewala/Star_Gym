@@ -1,0 +1,342 @@
+/* Account Page Styles */
+
+/* Common Card Styles */
+.account-card {
+    background-color: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.account-card-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.account-card-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.25rem;
+    /* text-xl */
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    /* tracking-wider */
+    color: white;
+    margin: 0;
+    line-height: normal;
+}
+
+.account-card-content {
+    padding: 1.5rem;
+}
+
+/* Page Layout */
+.account-page-wrapper {
+    background-color: #0B0B0B;
+    min-height: 100vh;
+    padding-top: 5rem;
+    /* py-20 */
+    padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .account-page-wrapper {
+        padding-top: 7rem;
+        /* md:py-28 */
+    }
+}
+
+.account-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    /* mb-12 */
+}
+
+@media (min-width: 768px) {
+    .account-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.account-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.25rem;
+    /* text-4xl */
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+    .account-title {
+        font-size: 3rem;
+        /* md:text-5xl */
+    }
+}
+
+.account-welcome {
+    color: #B0B0B0;
+    margin-top: 0.25rem;
+}
+
+.account-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 9999px;
+    height: 2.75rem;
+    /* h-11 */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.btn-outline-dark:hover {
+    background-color: #1A1A1A;
+}
+
+.btn-secondary-dark {
+    background-color: #1A1A1A;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    height: 2.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.btn-secondary-dark:hover {
+    background-color: #222;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.stat-card {
+    background-color: #1A1A1A;
+    padding: 1.5rem;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-value {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.25rem;
+    /* text-4xl */
+    color: white;
+    letter-spacing: 0.02em;
+}
+
+.stat-label {
+    color: #B0B0B0;
+    font-size: 0.875rem;
+    /* text-sm */
+    margin-top: 0.25rem;
+}
+
+/* Today's Workout */
+.workout-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #1A1A1A;
+    color: #E5483B;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(229, 72, 59, 0.3);
+}
+
+.workout-start-btn {
+    background-color: #E5483B;
+    color: white;
+    border-radius: 9999px;
+    height: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.workout-start-btn:hover {
+    background-color: #be352b;
+}
+
+/* Forms */
+.form-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    background-color: #1A1A1A;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 9999px;
+    height: 3rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.form-textarea {
+    border-radius: 1rem;
+    min-height: 100px;
+    padding-top: 1rem;
+    resize: vertical;
+}
+
+.form-save-btn {
+    background-color: #E5483B;
+    color: white;
+    border-radius: 9999px;
+    height: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Tabs */
+.tabs-list {
+    background-color: #1A1A1A;
+    border-radius: 9999px;
+    padding: 0.375rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-trigger {
+    background-color: transparent;
+    color: #B0B0B0;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-trigger.active {
+    background-color: #E5483B;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.list-item {
+    background-color: #1A1A1A;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Grid Layout for Main Content */
+.account-main-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .account-main-grid {
+        grid-template-columns: 2fr 1fr;
+        /* lg:grid-cols-[2fr_1fr] or just span 2 / 1 */
+    }
+}
+
+.col-span-2 {
+    grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+    .col-span-2 {
+        grid-column: span 2;
+    }
+}

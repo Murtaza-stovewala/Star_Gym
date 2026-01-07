@@ -1,0 +1,418 @@
+/* Global CSS */
+
+/* Base Variables - Mapped 1:1 from globals.css */
+:root {
+    --background: hsl(60, 11%, 4%);
+    /* #0B0B0B */
+    --foreground: hsl(0, 0%, 100%);
+    /* #FFFFFF */
+
+    --card: hsl(0, 0%, 7%);
+    --card-foreground: hsl(0, 0%, 98%);
+
+    --popover: hsl(60, 11%, 4%);
+    --popover-foreground: hsl(0, 0%, 100%);
+
+    --primary: hsl(5, 78%, 56%);
+    /* #E5483B */
+    --primary-foreground: hsl(0, 0%, 100%);
+
+    --secondary: hsl(0, 0%, 73%);
+    /* #B3B3B3 */
+    --secondary-foreground: hsl(0, 0%, 0%);
+
+    --muted: hsl(0, 0%, 54%);
+    /* #8A8A8A */
+    --muted-foreground: hsl(0, 0%, 30%);
+
+    --accent: hsl(5, 78%, 56%);
+    --accent-foreground: hsl(0, 0%, 100%);
+
+    --destructive: hsl(0, 84.2%, 60.2%);
+    --destructive-foreground: hsl(0, 0%, 98%);
+
+    --border: hsla(0, 0%, 100%, 0.06);
+    --input: hsla(0, 0%, 100%, 0.06);
+    --ring: hsl(5, 78%, 56%);
+
+    --radius: 2rem;
+    /* 32px */
+
+    /* Container Max Widths - derived from Tailwind default containers */
+    --container-padding: 1rem;
+    /* px-4 */
+    --container-max-width: 1280px;
+    /* Standard xl/2xl cap */
+}
+
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border-width: 0; border-style: solid; border-color: var(--border); - Tailwind Preflight usually does this */
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    /* Body font */
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: inherit;
+    line-height: inherit;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 12rem;
+        /* Ensure content isn't covered by fixed bottom nav */
+    }
+}
+
+/* Typography Utilities */
+.font-heading {
+    font-family: 'Anton', sans-serif;
+}
+
+/* --- Global Typography Readability Fix --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading,
+.section-title,
+.trainer-title,
+.font-heading {
+    letter-spacing: 0.02em;
+    /* Ensure positive spacing */
+    line-height: 1.2;
+    /* Relaxed line height */
+}
+
+b,
+strong,
+.font-bold,
+.btn,
+.nav-link,
+.uppercase {
+    letter-spacing: 0.01em;
+    /* Legible bold text */
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* Container Utility */
+.container {
+    width: 100%;
+    padding-right: var(--container-padding);
+    padding-left: var(--container-padding);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+        padding-right: 1.5rem;
+        /* sm:px-6 */
+        padding-left: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        padding-right: 2rem;
+        /* lg:px-8 */
+        padding-left: 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+
+/* Common Components */
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    /* rounded-full */
+    font-weight: 700;
+    font-size: 1.125rem;
+    /* text-lg */
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #be352b;
+    /* dark red approximation for hover (red-700 is a bit subjective in vanilla without full palette, will confirm if needed) */
+    /* Tailwin red-700 is #b91c1c */
+}
+
+/* Icons SVG Utility */
+/* --- Header & Navigation Styles --- */
+.header-container {
+    position: fixed;
+    top: 1rem;
+    /* top-4 */
+    left: 50%;
+    /* left-1/2 */
+    transform: translateX(-50%);
+    /* -translate-x-1/2 */
+    z-index: 50;
+    /* z-50 */
+    width: 100%;
+    /* w-full */
+    padding-left: 1rem;
+    /* px-4 */
+    padding-right: 1rem;
+    /* px-4 */
+}
+
+/* Desktop Nav */
+.desktop-nav-wrapper {
+    display: block;
+}
+
+.desktop-nav-wrapper .container {
+    max-width: 500px;
+    /* md:max-w-[500px] */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.desktop-nav {
+    background-color: #F3ECE6;
+    /* bg-[#F3ECE6] */
+    border-radius: 9999px;
+    /* rounded-full */
+    height: 3.5rem;
+    /* h-14 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+    /* px-6 */
+    padding-right: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* shadow-lg */
+    width: 100%;
+}
+
+.desktop-nav-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    /* md:gap-6 */
+}
+
+@media (max-width: 768px) {
+    .desktop-nav-group {
+        gap: 1rem;
+        /* gap-4 */
+    }
+}
+
+.nav-link {
+    /* text-black/70 hover:text-black text-sm font-bold uppercase */
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 700;
+    /* font-bold */
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+
+.nav-link.active {
+    color: #000000;
+}
+
+.nav-link.active::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #E5483B;
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Note: Visual inspection of React code logic vs CSS:
+   React logic: pathname === link.href -> active class.
+   The React generic Link component logic.
+*/
+
+.logo-link {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    /* gap-1 */
+    font-family: 'Anton', sans-serif;
+    /* font-heading */
+    font-size: 1.5rem;
+    /* text-2xl */
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Mobile Nav */
+.mobile-nav-wrapper {
+    display: none;
+}
+
+.mobile-brand-pill {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F3ECE6;
+    border-radius: 999px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    /* Increased bottom spacing slightly for better rhythm */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F3ECE6;
+    border-radius: 9999px;
+    /* Fully rounded */
+    width: auto;
+    /* Let it shrink fit */
+    min-width: 320px;
+    /* Minimum width constraint */
+    padding: 12px 24px;
+    /* More padding for "clean, lightweight" feel */
+    display: flex;
+    gap: 24px;
+    /* Increased gap */
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Softer shadow */
+}
+
+.mobile-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    /* Slightly more space between icon and text */
+    color: #8A8A8A;
+    /* Muted foreground */
+    font-size: 10px;
+    font-weight: 500;
+    padding: 0;
+    /* Removing pill padding */
+    background: transparent;
+    border-radius: 0;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    min-width: 44px;
+    /* Touch target size */
+}
+
+.mobile-nav-link svg {
+    width: 24px;
+    height: 24px;
+    color: inherit;
+    /* Inherit color from parent */
+    stroke-width: 2px;
+}
+
+.mobile-nav-link.active {
+    color: #E5483B;
+    /* Primary color */
+    font-weight: 500;
+    /* Keep weight normal/medium */
+    background-color: transparent;
+    /* No background bubble */
+}
+
+.mobile-nav-link.active svg {
+    stroke: #E5483B;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .desktop-nav-wrapper {
+        display: none;
+    }
+
+    .mobile-nav-wrapper {
+        display: block;
+    }
+}

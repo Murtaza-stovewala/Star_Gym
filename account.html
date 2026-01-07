@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | GYM</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/account.css">
+</head>
+
+<body class="font-body antialiased">
+    <!-- Header (Duplicated) -->
+    <header class="header-container">
+        <!-- Desktop Navbar -->
+        <div class="desktop-nav-wrapper">
+            <div class="container">
+                <nav class="desktop-nav">
+                    <div class="desktop-nav-group">
+                        <a href="index.html" class="logo-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="currentColor" stroke="currentColor" stroke-width="0" class="text-primary">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            GYM
+                        </a>
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="service.html" class="nav-link">Service</a>
+                        <a href="account.html" class="nav-link active">Account</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Mobile Navbars -->
+        <div class="mobile-nav-wrapper">
+            <div class="mobile-brand-pill">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                    stroke="currentColor" stroke-width="0" class="text-primary">
+                    <path
+                        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </svg>
+                <span class="font-heading text-2xl" style="color:black;">GYM</span>
+            </div>
+
+            <nav class="mobile-bottom-nav">
+                <a href="index.html" class="mobile-nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="mobile-nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16v-4" />
+                        <path d="M12 8h.01" />
+                    </svg>
+                    <span>About</span>
+                </a>
+                <a href="service.html" class="mobile-nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                    </svg>
+                    <span>Service</span>
+                </a>
+                <a href="account.html" class="mobile-nav-link active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    <span>Account</span>
+                </a>
+                <a href="contact.html" class="mobile-nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    <span>Contact</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="account-page-wrapper">
+        <div class="container">
+            <!-- Account Header -->
+            <div class="account-header">
+                <div>
+                    <h1 class="account-title">My Account</h1>
+                    <p class="account-welcome">Welcome back, John. Let’s keep building your strength.</p>
+                </div>
+                <div class="account-actions">
+                    <button class="btn-outline-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 0.5rem;">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                        </svg>
+                        Edit Profile
+                    </button>
+                    <button class="btn-secondary-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 0.5rem;">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                            <polyline points="16 17 21 12 16 7" />
+                            <line x1="21" x2="9" y1="12" y2="12" />
+                        </svg>
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Mapped -->
+            <div class="stats-grid">
+                <!-- Card 1 -->
+                <div class="stat-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="color: #E5483B; margin-bottom: 0.75rem;">
+                        <path d="m6.5 6.5 11 11" />
+                        <path d="m21 21-1-1" />
+                        <path d="m3 3 1 1" />
+                        <path d="m18 22 4-4" />
+                        <path d="m2 6 4-4" />
+                        <path d="m3 10 7-7" />
+                        <path d="m14 21 7-7" />
+                    </svg>
+                    <p class="stat-value">4</p>
+                    <p class="stat-label">Workouts This Week</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="stat-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="color: #E5483B; margin-bottom: 0.75rem;">
+                        <path
+                            d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.115.385-2.256 1-3.268.455.57.9 1.135 1.5 1.768z" />
+                    </svg>
+                    <p class="stat-value">1,820</p>
+                    <p class="stat-label">Calories Burned</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="stat-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="color: #E5483B; margin-bottom: 0.75rem;">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    </svg>
+                    <p class="stat-value">12</p>
+                    <p class="stat-label">Active Streak</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="stat-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="color: #E5483B; margin-bottom: 0.75rem;">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                    </svg>
+                    <p class="stat-value" style="font-size: 1.875rem;">Tomorrow</p>
+                    <p class="stat-label">Next Class</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="stat-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="color: #E5483B; margin-bottom: 0.75rem;">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                    </svg>
+                    <p class="stat-value" style="font-size: 1.875rem;">Monthly</p>
+                    <p class="stat-label">Current Plan</p>
+                </div>
+            </div>
+
+            <!-- Today's Workout -->
+            <div class="account-card" style="margin-bottom: 2rem;">
+                <div class="account-card-header">
+                    <h2 class="account-card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                        Today's Workout
+                        <span
+                            style="width: 0.5rem; height: 0.5rem; background-color: #E5483B; border-radius: 50%;"></span>
+                    </h2>
+                </div>
+                <div class="account-card-content">
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem;">
+                            <div style="flex-grow: 1;">
+                                <h3 style="font-size: 1.875rem; font-weight: 700; color: white;">Strength – Upper Body
+                                </h3>
+                                <div
+                                    style="display: flex; gap: 1rem; color: #B0B0B0; font-size: 0.875rem; margin-top: 0.5rem; align-items: center;">
+                                    <span>Duration: 45 min</span>
+                                    <span style="color: #E5483B;">|</span>
+                                    <span>Trainer: Alex Williams</span>
+                                    <span style="color: #E5483B;">|</span>
+                                    <span>Difficulty: Intermediate</span>
+                                </div>
+                                <div class="workout-status-badge" style="margin-top: 1rem;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                    Not Started
+                                </div>
+                                <div style="margin-top: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
+                                    <button class="workout-start-btn">
+                                        Start Workout
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" style="margin-left: 0.5rem;">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg>
+                                    </button>
+                                    <div style="display: flex; gap: 1rem; font-size: 0.875rem; color: #B0B0B0;">
+                                        <a href="#" style="color: inherit; text-decoration: none;">View Workout Plan</a>
+                                        <a href="#" style="color: inherit; text-decoration: none;">Skip / Reschedule</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                style="width: 1px; background-color: rgba(255,255,255,0.1); align-self: stretch; display: none; md:display: block;">
+                            </div>
+
+                            <div
+                                style="width: 100%; max-width: 250px; display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; gap: 0.75rem; align-items: center;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" style="color: #E5483B;">
+                                        <path
+                                            d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.115.385-2.256 1-3.268.455.57.9 1.135 1.5 1.768z" />
+                                    </svg>
+                                    <div>
+                                        <p style="font-size: 0.875rem; color: #B0B0B0;">Estimated Calories</p>
+                                        <p style="font-weight: 700; color: white;">320 kcal</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 0.75rem; align-items: center;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" style="color: #E5483B;">
+                                        <path d="m6.5 6.5 11 11" />
+                                        <path d="m21 21-1-1" />
+                                        <path d="m3 3 1 1" />
+                                        <path d="m18 22 4-4" />
+                                        <path d="m2 6 4-4" />
+                                        <path d="m3 10 7-7" />
+                                        <path d="m14 21 7-7" />
+                                    </svg>
+                                    <div>
+                                        <p style="font-size: 0.875rem; color: #B0B0B0;">Exercises</p>
+                                        <p style="font-weight: 700; color: white;">6</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 0.75rem; align-items: center;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" style="color: #E5483B;">
+                                        <polyline points="17 1 21 5 17 9" />
+                                        <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                                        <polyline points="7 23 3 19 7 15" />
+                                        <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                                    </svg>
+                                    <div>
+                                        <p style="font-size: 0.875rem; color: #B0B0B0;">Warm-up & Cooldown</p>
+                                        <p style="font-weight: 700; color: white;">Included</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Grid -->
+            <div class="account-main-grid">
+                <!-- Left Column -->
+                <div class="col-span-2">
+                    <!-- Profile Info -->
+                    <div class="account-card">
+                        <div class="account-card-header">
+                            <h3 class="account-card-title">Profile & Personal Information</h3>
+                        </div>
+                        <div class="account-card-content">
+                            <div class="form-grid">
+                                <div style="grid-column: 1 / -1; display: flex; gap: 1rem; align-items: center;">
+                                    <div
+                                        style="width: 5rem; height: 5rem; border-radius: 50%; overflow: hidden; background-color: #333;">
+                                        <img src="https://picsum.photos/seed/user-profile/200" alt="Profile"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div>
+                                        <button class="btn-outline-dark"
+                                            style="height: 2.5rem; font-size: 0.875rem;">Upload Photo</button>
+                                        <p style="font-size: 0.75rem; color: #8A8A8A; margin-top: 0.25rem;">PNG, JPG,
+                                            GIF up to 10MB.</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-input" value="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-input" value="john.doe@example.com" readonly
+                                        style="opacity: 0.7;">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-input" value="(123) 456-7890">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Emergency Contact</label>
+                                    <input type="tel" class="form-input" value="(987) 654-3210">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Height (cm)</label>
+                                    <input type="number" class="form-input" value="182">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Weight (kg)</label>
+                                    <input type="number" class="form-input" value="85">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Fitness Level</label>
+                                    <select class="form-select">
+                                        <option value="beginner">Beginner</option>
+                                        <option value="intermediate" selected>Intermediate</option>
+                                        <option value="advanced">Advanced</option>
+                                    </select>
+                                </div>
+                                <div style="grid-column: 1 / -1; display: flex; justify-content: flex-end;">
+                                    <button class="form-save-btn">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Classes & Workout History (Tabs) -->
+                    <div class="account-card">
+                        <div class="account-card-header">
+                            <h3 class="account-card-title">Classes & Workout History</h3>
+                        </div>
+                        <div class="account-card-content tabs-container">
+                            <div class="tabs-list">
+                                <button class="tab-trigger active" data-target="upcoming">Upcoming Classes</button>
+                                <button class="tab-trigger" data-target="history">Workout History</button>
+                            </div>
+
+                            <div id="upcoming" class="tab-content active">
+                                <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                                    <!-- Class Item -->
+                                    <div class="list-item">
+                                        <div>
+                                            <p style="font-weight: 700; color: white;">Signature HIIT</p>
+                                            <p style="font-size: 0.875rem; color: #B0B0B0;">Michael Chen • Tomorrow,
+                                                9:00 AM</p>
+                                        </div>
+                                        <button class="btn-outline-dark"
+                                            style="height: 2rem; font-size: 0.75rem; padding: 0 1rem;">Reschedule</button>
+                                    </div>
+                                    <div class="list-item">
+                                        <div>
+                                            <p style="font-weight: 700; color: white;">Advanced Strength</p>
+                                            <p style="font-size: 0.875rem; color: #B0B0B0;">Alex Williams • June 28,
+                                                2024, 6:00 PM</p>
+                                        </div>
+                                        <button class="btn-outline-dark"
+                                            style="height: 2rem; font-size: 0.75rem; padding: 0 1rem;">Reschedule</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="history" class="tab-content">
+                                <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                                    <div class="list-item">
+                                        <div>
+                                            <p style="font-weight: 700; color: white;">Yoga & Flexibility</p>
+                                            <p style="font-size: 0.875rem; color: #B0B0B0;">Jessica Miller • June 24,
+                                                2024, 7:00 PM</p>
+                                        </div>
+                                        <span
+                                            style="font-size: 0.75rem; font-weight: 700; color: #4ade80;">Completed</span>
+                                    </div>
+                                    <div class="list-item">
+                                        <div>
+                                            <p style="font-weight: 700; color: white;">Signature HIIT</p>
+                                            <p style="font-size: 0.875rem; color: #B0B0B0;">Michael Chen • June 22,
+                                                2024, 9:00 AM</p>
+                                        </div>
+                                        <span
+                                            style="font-size: 0.75rem; font-weight: 700; color: #4ade80;">Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security -->
+                    <div class="account-card">
+                        <div class="account-card-header">
+                            <h3 class="account-card-title">Security & Account Settings</h3>
+                        </div>
+                        <div class="account-card-content">
+                            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <label class="form-label">Change Password</label>
+                                    <button class="btn-outline-dark" style="height: 2.25rem;">Change</button>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <label class="form-label">Enable Email Notifications</label>
+                                    <!-- Toggle Switch styled roughly -->
+                                    <input type="checkbox" checked
+                                        style="accent-color: #E5483B; transform: scale(1.5);">
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <label class="form-label">Enable Workout Reminders</label>
+                                    <input type="checkbox" style="accent-color: #E5483B; transform: scale(1.5);">
+                                </div>
+                                <div
+                                    style="border-top: 1px solid rgba(220,38,38,0.2); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                                    <label class="form-label" style="color: #f87171;">Delete Account</label>
+                                    <button
+                                        style="background-color: rgba(127,29,29,0.5); color: #fca5a5; border: none; border-radius: 9999px; height: 2.25rem; padding: 0 1rem; font-size: 0.875rem; font-weight: 500; cursor: pointer;">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div>
+                    <!-- Fitness & Goals -->
+                    <div class="account-card">
+                        <div class="account-card-header">
+                            <h3 class="account-card-title">Fitness & Goals</h3>
+                        </div>
+                        <div class="account-card-content">
+                            <div class="form-grid" style="grid-template-columns: 1fr;">
+                                <div class="form-group">
+                                    <label class="form-label">Current Goal</label>
+                                    <select class="form-select">
+                                        <option value="strength" selected>Strength</option>
+                                        <option value="fat-loss">Fat Loss</option>
+                                        <option value="endurance">Endurance</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Weekly Target</label>
+                                    <select class="form-select">
+                                        <option value="4" selected>4 workouts/week</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Preferred Training</label>
+                                    <select class="form-select">
+                                        <option value="strength" selected>Strength</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Injuries / Limitations</label>
+                                    <textarea class="form-textarea"
+                                        placeholder="e.g., 'Minor shoulder pain...'"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Membership -->
+                    <div class="account-card">
+                        <div class="account-card-header">
+                            <h3 class="account-card-title">Membership & Billing</h3>
+                        </div>
+                        <div class="account-card-content">
+                            <div
+                                style="background-color: #1A1A1A; padding: 1.25rem; border-radius: 0.75rem; margin-bottom: 1.5rem;">
+                                <p style="font-size: 0.875rem; color: #B0B0B0;">Current Plan</p>
+                                <p style="font-size: 1.25rem; font-weight: 700; color: white;">Monthly</p>
+                                <p style="font-size: 0.875rem; color: #B0B0B0; margin-top: 0.5rem;">Renews on July 1,
+                                    2024</p>
+                                <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                                    <button
+                                        style="background-color: #E5483B; color: white; border: none; border-radius: 9999px; height: 2rem; padding: 0 1rem; font-size: 0.75rem; font-weight: 600;">Upgrade
+                                        Plan</button>
+                                    <button
+                                        style="background-color: transparent; color: #B0B0B0; border: none; height: 2rem; padding: 0 1rem; font-size: 0.75rem;">Cancel</button>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 1.5rem;">
+                                <p style="font-weight: 700; color: white; margin-bottom: 0.5rem;">Payment Method</p>
+                                <div
+                                    style="background-color: #1A1A1A; padding: 0.75rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" style="color: #B0B0B0;">
+                                        <rect width="20" height="14" x="2" y="5" rx="2" />
+                                        <line x1="2" x2="22" y1="10" y2="10" />
+                                    </svg>
+                                    <span style="color: white; font-size: 0.875rem;">Visa ending in 1234</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p style="font-weight: 700; color: white; margin-bottom: 0.75rem;">Billing History</p>
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <span style="color: #B0B0B0;">Monthly Membership Fee</span>
+                                        <span style="color: white; font-family: monospace;">$300.00</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <span style="color: #B0B0B0;">Monthly Membership Fee</span>
+                                        <span style="color: white; font-family: monospace;">$300.00</span>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <span style="color: #B0B0B0;">Monthly Membership Fee</span>
+                                        <span style="color: white; font-family: monospace;">$300.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="account-card">
+                        <div class="account-card-header">
+                            <h3 class="account-card-title">Support</h3>
+                        </div>
+                        <div class="account-card-content">
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                                <a href="#"
+                                    style="display: flex; align-items: center; gap: 0.75rem; color: white; text-decoration: none;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                                        <path d="M12 17h.01" />
+                                    </svg>
+                                    Contact Support
+                                </a>
+                                <a href="#"
+                                    style="display: flex; align-items: center; gap: 0.75rem; color: white; text-decoration: none;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                                        <polyline points="14 2 14 8 20 8" />
+                                        <line x1="16" x2="8" y1="13" y2="13" />
+                                        <line x1="16" x2="8" y1="17" y2="17" />
+                                        <line x1="10" x2="8" y1="9" y2="9" />
+                                    </svg>
+                                    FAQs
+                                </a>
+                                <a href="#"
+                                    style="display: flex; align-items: center; gap: 0.75rem; color: white; text-decoration: none;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg>
+                                    Request Trainer Help
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/account.js"></script>
+    <script src="assets/js/global.js"></script>
+</body>
+
+</html>

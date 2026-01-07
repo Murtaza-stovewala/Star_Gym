@@ -1,0 +1,503 @@
+/* About Page Styles */
+
+/* General Typography Overrides for About Page */
+.about-subtitle {
+    font-weight: 700;
+    color: #E5483B;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.about-heading {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    /* Relaxed from 1 */
+    letter-spacing: 0.02em;
+    /* Positive spacing */
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .about-heading {
+        font-size: 3.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-heading {
+        font-size: 4.5rem;
+    }
+}
+
+.about-desc {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    /* Adjusted for better density */
+    line-height: 1.6;
+    color: #B0B0B0;
+    max-width: 34rem;
+    /* Slightly wider */
+}
+
+/* About Hero Section */
+.about-hero-section {
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+    .about-hero-section {
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+    }
+}
+
+.about-hero-section .grid {
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .about-hero-section .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-btn {
+    margin-top: 2.5rem;
+    background-color: #E5483B;
+    color: white;
+    border-radius: 9999px;
+    height: 3.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.about-btn:hover {
+    background-color: #be352b;
+}
+
+.about-image-wrapper {
+    position: relative;
+    height: 24rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .about-image-wrapper {
+        height: 550px;
+    }
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+.about-badge {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    /* Fixed: Aligned left not center */
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Origin Story Section */
+.origin-story-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #0d0d0d;
+    /* Slightly darker */
+}
+
+.origin-grid {
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .origin-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .origin-image-col {
+        order: -1;
+    }
+}
+
+.origin-image-container {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    /* Ensure no background bleed */
+    background-color: #121212;
+}
+
+/* Fix for missing utility classes on origin image */
+.origin-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* Match the high-contrast B&W look from screenshot */
+    filter: grayscale(100%) contrast(1.1);
+    display: block;
+    /* Remove inline gap */
+}
+
+@media (min-width: 768px) {
+    .origin-image-container {
+        height: 600px;
+    }
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+    text-align: center;
+}
+
+.philosophy-grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .philosophy-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.philosophy-pillar {
+    background-color: #161616;
+    padding: 2.5rem;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pillar-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+    width: 4.5rem;
+    background-color: #1F1F1F;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #E5483B;
+}
+
+.pillar-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.pillar-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #B0B0B0;
+}
+
+/* Stats Section */
+.stats-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #161616;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stats-value {
+    font-family: 'Anton', sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .stats-value {
+        font-size: 4.5rem;
+    }
+}
+
+.stats-label {
+    color: #B0B0B0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Core Values Section */
+.core-values-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.core-values-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .core-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .core-values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.core-value-card {
+    background-color: #1A1A1A;
+    padding: 2.5rem;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    height: 100%;
+}
+
+/* Trainers Section */
+.trainers-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: #121212;
+    width: 100%;
+    overflow-x: hidden;
+    /* Safety net for viewport overflow */
+}
+
+.trainers-section .container {
+    /* Ensure container is strictly bounded */
+    max-width: 100%;
+    margin: 0 auto;
+    /* Use global padding vars but ensure box-sizing */
+    box-sizing: border-box;
+    /* Global container class should handle widths, but we reinforce constraint locally if needed */
+}
+
+.trainers-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 4rem;
+    width: 100%;
+    /* Default Mobile: 1 Column */
+    grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 768px) {
+    .trainers-grid {
+        /* Tablet: 2 Columns */
+        grid-template-columns: repeat(2, 1fr);
+        /* Equidistant columns */
+    }
+}
+
+@media (min-width: 1024px) {
+    .trainers-grid {
+        /* Desktop: 4 Columns matches React */
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.trainer-card {
+    text-align: left;
+    width: 100%;
+    /* Force card to fit grid column */
+    min-width: 0;
+    /* Important for Grid: prevents blowout from large child content */
+}
+
+.trainer-image-container {
+    position: relative;
+    /* Responsive height logic or fixed height matching original aspect ratio? 
+       React uses h-96 (24rem/384px) */
+    height: 24rem;
+    width: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    background-color: #1A1A1A;
+    /* Neutral background kept just in case, though cover should hide it */
+}
+
+/* Ensure image fills the card edge-to-edge */
+.trainer-image-container img {
+    object-fit: cover !important;
+    /* STRICTLY FILL CARD */
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.trainer-card:hover .trainer-image-container {
+    filter: grayscale(0%);
+}
+
+.trainer-name {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.trainer-role {
+    color: #E5483B;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.trainer-exp {
+    color: #888;
+    font-size: 0.875rem;
+}
+
+/* Community Section */
+.community-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.community-grid {
+    display: grid;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .community-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* CTA Section */
+.cta-section {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+
+.cta-banner {
+    background-color: #E5483B;
+    border-radius: 40px;
+    /* More rounded */
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .cta-banner {
+        padding: 5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.cta-heading {
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    max-width: 24rem;
+}
+
+@media (min-width: 768px) {
+    .cta-heading {
+        font-size: 3.5rem;
+        max-width: 32rem;
+    }
+}
+
+.cta-btn {
+    background-color: white;
+    color: black;
+    height: 3.5rem;
+    padding: 0 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}

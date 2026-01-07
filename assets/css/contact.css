@@ -1,0 +1,349 @@
+/* Contact Page Styles */
+
+.contact-page-wrapper {
+    background-color: #0B0B0B;
+    min-height: 100vh;
+    padding-top: 5rem;
+    /* py-20 */
+    padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .contact-page-wrapper {
+        padding-top: 7rem;
+        /* md:py-28 */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page-wrapper {
+        padding-bottom: 12rem;
+    }
+}
+
+.contact-section-mb {
+    margin-bottom: 5rem;
+    /* mb-20 */
+}
+
+/* Intro Section */
+.contact-intro-grid {
+    display: grid;
+    gap: 3rem;
+    /* gap-12 */
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .contact-intro-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* md:grid-cols-2 */
+    }
+}
+
+.contact-label {
+    font-weight: 700;
+    color: #E5483B;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    /* tracking-widest */
+    margin-bottom: 0.5rem;
+    /* mb-2 */
+}
+
+.contact-heading-main {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    /* text-5xl */
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .contact-heading-main {
+        font-size: 3.75rem;
+        /* md:text-6xl */
+    }
+
+    .contact-intro-grid .text-left {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-heading-main {
+        font-size: 4.5rem;
+        /* lg:text-7xl */
+    }
+}
+
+.contact-desc {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    /* text-lg */
+    color: #B0B0B0;
+    max-width: 32rem;
+}
+
+.contact-info-grid {
+    display: grid;
+    gap: 1.5rem;
+    /* gap-6 */
+}
+
+@media (min-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.contact-info-card {
+    background-color: #1A1A1A;
+    padding: 1.5rem;
+    /* p-6 */
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-icon-circle {
+    height: 3.5rem;
+    /* h-14 */
+    width: 3.5rem;
+    /* w-14 */
+    background-color: #E5483B;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    /* mb-4 */
+}
+
+.contact-info-title {
+    font-weight: 700;
+    color: white;
+    font-size: 1.125rem;
+    /* text-lg */
+}
+
+.contact-info-value {
+    color: #B0B0B0;
+    font-size: 0.875rem;
+    /* text-sm */
+}
+
+/* Main Contact Grid (Form & Map) */
+.contact-main-grid {
+    display: grid;
+    gap: 2rem;
+    /* gap-8 */
+    align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    .contact-main-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contact-card {
+    background-color: #1A1A1A;
+    padding: 2rem;
+    /* p-8 */
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-section-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.875rem;
+    /* text-3xl */
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: white;
+    margin-bottom: 1.5rem;
+    /* mb-6 */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* space-y-6 */
+}
+
+.contact-submit-btn {
+    width: 100%;
+    background-color: #E5483B;
+    color: white;
+    border-radius: 9999px;
+    height: 3.5rem;
+    /* h-14 */
+    font-weight: 700;
+    font-size: 1.125rem;
+    /* text-lg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-submit-btn:hover {
+    background-color: #be352b;
+}
+
+.contact-map-wrapper {
+    position: relative;
+    height: 16rem;
+    /* h-64 */
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* space-y-2 */
+    color: #B0B0B0;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hours-time {
+    font-family: monospace;
+    color: white;
+}
+
+/* Quick Actions */
+.quick-actions-grid {
+    display: grid;
+    gap: 2rem;
+    /* gap-8 */
+}
+
+@media (min-width: 768px) {
+    .quick-actions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.action-card {
+    background-color: #1A1A1A;
+    padding: 2rem;
+    /* p-8 */
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.action-card:hover {
+    background-color: #222;
+}
+
+.action-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.25rem;
+    /* text-xl */
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.02em;
+}
+
+/* Social Section */
+.social-section {
+    text-align: center;
+    padding-top: 2.5rem;
+    /* py-10 */
+    padding-bottom: 2.5rem;
+}
+
+.social-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #8A8A8A;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-link {
+    color: white;
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: #E5483B;
+}
+
+.trust-text {
+    font-size: 0.875rem;
+    /* text-sm */
+    color: #8A8A8A;
+}
+
+/* Reusing Form Styles from Account CSS where possible or redefining specifically */
+.contact-input,
+.contact-select,
+.contact-textarea {
+    background-color: #0B0B0B;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 9999px;
+    height: 3rem;
+    /* h-12 */
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    width: 100%;
+}
+
+.contact-input:focus,
+.contact-select:focus,
+.contact-textarea:focus {
+    border-color: #E5483B;
+    outline: none;
+}
+
+.contact-textarea {
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    min-height: 120px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    resize: vertical;
+}
