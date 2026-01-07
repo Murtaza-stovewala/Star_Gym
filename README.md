@@ -66,8 +66,8 @@ Since this is a static website, you don't need to install complex dependencies o
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/Murtaza-stovewala/Star-Gym.git
-cd Star-Gym
+git clone https://github.com/Murtaza-stovewala/Star_Gym.git
+cd Star_Gym
 ```
 
 ### 2️⃣ Run the Project
